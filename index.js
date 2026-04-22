@@ -6,8 +6,9 @@ const app = express();
 // Use port from environment (Jenkins), fallback if not set
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+ app.get('/', (req, res) => {
+// res.sendFile(path.join(__dirname, 'index.html'));
+   res.send("hello word");
 });
 
 app.listen(PORT, () => {
